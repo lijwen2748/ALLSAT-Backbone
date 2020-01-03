@@ -1,0 +1,43 @@
+\typeout{IJCAI--PRICAI--20 Instructions for Authors}
+\documentclass{article}
+\pdfpagewidth=8.5in
+\pdfpageheight=11in
+\usepackage{ijcai20}
+
+\usepackage{times}
+\usepackage{soul}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[small]{caption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\urlstyle{same}
+
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath,amsthm,amsfonts}
+\usepackage[vlined,ruled,linesnumbered,algo2e]{algorithm2e}
+\usepackage{color}
+
+\input{macro}
+\begin{document}
+\title{On Computing ALLSAT Using Backbone Information}
+\maketitle
+\begin{abstract}
+The ALLSAT (All-Solutions) problems focus on finding every existing satisfiable assignment of a given propositional satisfiability formula. There are several different tasks require the finding of all satisfiable assignments, including model checking, automaton translation and test cases generation.
+In this paper, we introduce \tool, a backbone based ALLSAT solver for propositional formulas. Comparing to the existing work, \tool uses backbone information to get shorter partial satisfiable assignments (partial solutions). More solutions are represented in a shorter partial solution, thus the efficiency of ALLSAT computing has been increased as less SAT solving is needed.
+Experiments show that although finding backbone variables consumes additional computing time , but \tool is still quicker than existing tools,. including \ctool, \bc, \nbc and \bdd. Within the time limitation, the number of formulas which ALLSAT problem that \tool can solve (finish finding all satisfiable assignments of the formulas) is the most. For formulas that are solved by all of the 4 tools, \tool uses xx less computing time than \ctool, xx less time than \bc, xx less time than \nbc and xx less time than \bdd.
+\end{abstract}
+\input{intro.tex}
+\input{prel.tex}
+\input{meth.tex}
+\input{expr.tex}
+\input{conc.tex}
+
+
+\end{document}

@@ -1,0 +1,38 @@
+\section{Preliminaries} \label{sec:prel}
+Notations
+SAT formulas, variables, literals, clauses
+unique satisfiable reason of and unique satisfied clause
+
+Let $X$ be a finite set of Boolean variables. For every Boolean variable $x\in X$, $x$ can only be assigned to 0 or 1.
+A literal $l$ is either a Boolean variable $x$ or its negation $\neg x$. For a literal $l$, the corresponding variable of $l$ is $x(l)$.
+A clause $c$ is a disjunction of literals, a literal $l$ is in a clause $c$ ($l\in c$) if and only if $l$ appears in the disjunction that consist the clause $c$. A variable $x$ is in a clause $c$ if and only if literal $x$ or literal $\neg x$ appears in the disjunction that consist the clause $c$. 
+A SAT formula $F$ is a conjunction of clauses, a clause $c$ is in the formula $F$ ($c\in F$) if and only if $c$ appears in the conjunction that consist the formula $F$. A variable $x$ is in a formula $F$ if and only if there exists a clause $c$ such that $x\in c$ and $c\in F$ or $\neg x\in c$ and $c\in F$. 
+
+An \emph{assignment} $a$ of a given SAT formula $F$ is a function that maps each variable $x\in F$ to 0, 1, or $NOT_KNOWN$. 
+For example, an assignment $a: \{x_1, x_2, ..., x_k\} \mapsto \{1, 1, ..., 0\}$ is an assignment of the formula $F$, where $k$ is the number of Boolean variables in $F$. 
+For a variable $x\in F$, the value of $x$ in the assignment $a$ is $a(x)$, and the value of $F$ in the assignment $a$ is $a(F)$.
+$\neg a(x)=1$ if $a(x)=0$ and $\neg a(x)=0$ if $a(x)=1$.
+For an assignment $a$ if there does not exist a variable $x\in F$, such that $a(x)=NOT_KNOWN$, then $a$ is a full assignment of the given formula $F$. 
+An assignment $p$ is a partial assignment if there exists at least one variable $x$ such that $p(x)=NOT_KNOWN$.
+
+For a given assignment $v$, $v$ is a \emph{model (solution)} of the given formula $F$ if and only if the value of $F$ in the assignment $v$ is 1, i.e., $v\models F$ if and only if $v(F)=1$. If $v$ is a full assignment of $F$ then $v$ is also a full model (solution) of $F$. $v$ is a partial model (solution) of $F$ if $v$ is a partial assignment.
+The models are written as the conjunctions of literals for short, for example, for a model $v$ if $v(a)=1$ and $v(b)=0$, then $v$ is written as $v=a\wedge \neg b$.
+
+For a given partial model $v$, $v$ is able to represent at least two different full models $v_1$ and $v_2$, for every variable $x$ such that $v(x)\neq NOT_KNOWN$, $v_1(x)=v_2(x)=v(x)$, and for every variable $x'$ such that $v(x')=NOT_KNOWN$, $v_1(x')\neq v_2(x')$ and $v_1(x')\neq NOT_KNOWN$, $v_2(x')\neq NOT_KNOWN$.
+
+For example, given a formula $F=(a\vee b)\wedge(a\vee \neg b)$, $v=a$ is partial model of $F$ and $v_1=a\wedge b$, $v_2=a\wedge \neg b$ are two different full models represents by $v$.
+
+
+\begin{definition}[Backbone Variable]
+For a given satisfiable formula $F$, and a variable $x\in F$, $x$ is a backbone variable if $x\wedge F$ or $\neg x \wedge F$ is unsatisfiable.
+\end{definition}
+
+\begin{lemma}[Backbone Assignment]
+For a backbone variable $x$ of a given formula $F$, the value of $x$ must be always assigned to 1 or 0 in all models.
+\end{lemma}
+
+\begin{definition}[Essential Variables]
+For a given formula $F$, a variable $x\in F$ and a full model $v\models F$, $x$ is an essential variable of $F$ with $v$, if and only if there exists a clause $c\in F$ such that $v(x)=1, x\in c$ and for every variable $x'\in c, x\neq x'$, $v(x')=0$. 
+\end{definition}
+
+An essential variable $x$ is the only reason that make a clause $c$ satisfiable in a formula $F$. For an essential variable $x$ with model $v$, the assignment $a$ is not a model of $F$ such that for every variable $x' \neq x $, $a(x')=v(x')$ and $a(x)=\neg v(x)$.
