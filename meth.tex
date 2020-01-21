@@ -1,11 +1,11 @@
-\section{All-SAT Solver Using Backbone Information} \label{sec:meth}
-We propose and implement an All-SAT solver \tool, \tool uses backbone information to get shorter partial solutions comparing to other tools.
-With the help of shorter partial solutions, the number of SAT solving in \tool reduced and the efficiency increased.
+\section{All-SAT Solver Using Backbone techniques} \label{sec:meth}
+We propose and implement an All-SAT solver \tool, which uses backbone information to get shorter partial solutions comparing to other tools.
+With the help of shorter partial solutions, the number of SAT calls in \tool significantly reduces and the efficiency increases.
 
 \subsection{Overview of Algorithms}
 Figure \ref{fig:overflow} shows the workflow of \tool.
 Given a formula $F$, \tool first computes the backbone variables of $F$ using tools from \cite{bb}.
-For every backbone variable $bl$ of $F$, $bl\in \BL(F)$, and $bl$ is added to $F$ as a unit clause. During the computing of backbone variables, solutions are also generated and stored in $S(F)$. The partial solution of each solution $v\in S(F)$ is stored in $P(F)$.
+For every backbone variable $bl$ of $F$, $bl\in \BL(F)$, and $bl$ is added to $F$ as a unit clause. During the computation of backbone variables, solutions are also generated and stored in $S(F)$. The partial solution of each solution $v\in S(F)$ is stored in $P(F)$.
 \tool then computes the partial solution $p=partial(v)$ and the blocking clause $C$ for every solution in $S(F)$, and adds the partial solutions to $P(F)$. 
 All backbone variables are removed from the partial solution $p$ of a solution $v$, and every essential but non-backbone literal remains in $p$. If every clause is satisfied with the current $p$, i.e., $\forall c\in F, p(c)=1$, the generation of $p$ completes, otherwise, more literals are added to $p$ based on a greedy strategy.
 The blocking clause $C$ of a partial solution $p$ is the negation of $p$. For example, if $p=a\wedge b \wedge c$, then the blocking clause $C$ of $p$ is $C=\neg a \vee \neg b \vee \neg c$.
@@ -26,9 +26,9 @@ The updating of the formula $F$ continues until $F$ is unsatisfiable.
 \subsection{Algorithms of \tool}
 Algorithm \ref{alg:main} shows the main algorithm of \tool, where backbone($F$) uses the algorithms of backbone computing in~\cite{bb}.
 The detail of blocking($F$) is showed in Algorithm \ref{alg:pc}.
-In Algorithm \ref{alg:main}, at Line \ref{ln:P}, the set of partial solutions and blocking clauses are initialized with $\emptyset$. The backbone variables of $F$ is computed, stored in $\BL(F)$ and added to $F$ as unit clauses. The solutions obtained from the backbone computing are stored in $S(F)$.
-For every solution $v\in S(F)$, the partial solution $p$ and the blocking clause $C$ are computed, and stored in $P(F)$ and $BC(F)$ respectively. 
-At Line \ref{ln:bc}, the blocking clauses in $BC(F)$ are added to $F$, $ret$ is assigned with the satisfiability of $F$, returning by the Minisat Solver. If $F$ is satisfiable, then $v$ is a new solution of $F$, the partial solution $p$ and the blocking clause $C$ of the new solution $v$ is computed at Line \ref{ln:cvt}, and $F$ is updated with $F\wedge C$ again. The while loop at Line \ref{ln:check} keeps if $F$ is satisfiable, otherwise \tool finishes the computing of every solution for the input formula, which is represented by at least one of the partial solutions in $P(F)$.
+In Algorithm \ref{alg:main}, at Line \ref{ln:P}, the set of partial solutions and blocking clauses are initialized with $\emptyset$. The backbone variables of $F$ is computed, stored in $\BL(F)$ and added to $F$ as unit clauses. The solutions obtained from the backbone computation are stored in $S(F)$.
+For every solution $v\in S(F)$, the partial solution $p$ and the blocking clause $C$ are computed and stored in $P(F)$ and $BC(F)$ respectively. 
+At Line \ref{ln:bc}, the blocking clauses in $BC(F)$ are added to $F$, $ret$ is assigned with the satisfiability of $F$, returned by the Minisat Solver. If $F$ is satisfiable, then $v$ is a new solution of $F$, the partial solution $p$ and the blocking clause $C$ of the new solution $v$ is computed at Line \ref{ln:cvt}, and $F$ is updated with $F\wedge C$ again. The while loop at Line \ref{ln:check} continues if $F$ is satisfiable, otherwise \tool finishes the computing of every solution for the input formula, which is represented by at least one of the partial solutions in $P(F)$.
 
 \begin{algorithm}
 \SetKwInOut{Input}{Input}
@@ -106,7 +106,7 @@ $C:=\emptyset$\; \label{ln:init}
 \end{algorithm}
 
 \begin{theorem} \label{theo:bl}
-For a backbone variable $bl$ of a given formula $F$, if a partial solution $p\models F$, then $bl$ in $p$ and $p(bl)=1$.
+For a backbone variable $bl$ of a given formula $F$, if a partial solution $p\models F$, then $bl$ is in $p$ and $p(bl)=1$.
 \end{theorem}
 
 \begin{proof}
