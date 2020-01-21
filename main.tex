@@ -26,15 +26,15 @@
 
 \input{macro}
 \begin{document}
-\title{Solving ALLSAT with Backbone Information}
+\title{Solving All-SAT with Shorter Blocking Clauses Redueced by Backbone Variables}
 \maketitle
 \begin{abstract}
-The ALLSAT (All-Solutions) problems focus on finding every existing satisfiable assignment of a given propositional formula. Several different tasks in computer science require the finding of all satisfiable assignments, including model checking, automaton translation and test cases generation.
-In this paper, we introduce \tool, a backbone based ALLSAT solver for propositional formulas. Comparing to the existing work, \tool uses backbone information to get shorter partial solutions. With more solutions representing in the shorter partial solution, less SAT solving is needed and the efficiency of ALLSAT computing increases.
-Experiments show that although finding backbone variables consumes additional computing time , \tool is still faster than existing tools,. including \ctool, \bc, \nbc and \bdd.
-Within the time and memory limitation, \tool solves the most formulas.
+The All-SAT (All-Solutions) problem focuses on finding every existing satisfiable assignment of a given propositional formula. Several different tasks in computer science require the finding of all satisfiable assignments, including model checking, automaton translation and test cases generation.
+In this paper, we introduce \tool, a backbone based All-SAT solver for propositional formulas. Comparing to the existing work, \tool uses backbone information to get shorter partial solutions. With more solutions representing in the shorter partial solution, less SAT solving is needed and the efficiency of All-SAT computing increases.
+Experiments show that although finding backbone variables consumes additional computing time , \tool is still faster than existing tools, including \ctool, \bc, \nbc and \bdd.
+Within the time and memory limitation, \tool solves the most formulas, which is 18\% more than \ctool, 19\% more than \bc, 33\% more than \nbc and 36\% more than \bdd.
 % (79), \ctool solves 65 formulas, \bc solves 64 formulas, \nbc solves 53 formulas and \bdd solves 51 formulas.
-For the formulas that are solved by all the 5 tools, \tool uses the least computing time.
+For the formulas that are solved by all the 5 tools, \tool uses the least computing time, which is 51\% less than \ctool, 48\% less than \bc, 54\% less than \nbc and 67\% less than \bdd.
 % (9558.64 seconds), which is 51\% less than \ctool(19427.51 seconds), 48\% less than \bc(18221,86 seconds),  54\% less than \nbc(21263.27 seconds) and 67\% less than \bdd(28901.35 seconds). 
 \end{abstract}
 \input{intro.tex}
