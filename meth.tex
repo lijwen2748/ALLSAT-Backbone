@@ -113,6 +113,7 @@ For a backbone variable $bl$ of a given formula $F$, if a partial solution $p\mo
 Given a formula $F$ and a backbone variable $bl$ of $F$, suppose there exists a partial solution $p$ such that $p(bl)=$ NOT\_KNOWN. Then there must exist two different solutions of $F$, such that for every variable $x\neq bl$, $v_1(x)=v_2(x)=v(x)$, and $v_1(bl)=\neg v_2(bl)=1$ or $v_1(bl)=\neg v_2(bl)=0$. In both cases, $bl$ is not a backbone variable of $F$ which contradicts with the assumptions that $bl$ is a variable of $F$.
 \end{proof}
 According to Theorem \ref{theo:bl}, there does not exist a partial solution $p$ such that a backbone variable $bl$ is not in $p$. Therefore, it is correct and essential to add all backbone variables back to every partial solution.
+After adding the backbone variables to the original formula, they can be removed from the blocking clauses.
 
 The main contribution of \tool is to use backbone variables in the computing of partial solutions and the blocking clauses. As proved in Theorem \ref{theo:bl}, every backbone variable must appear in every partial solution. Therefore, \tool removes the backbone variables and generates blocking clauses without them in it. To simplify the following SAT solving, backbone variables are used as initial assumptions by adding them back as unit clauses. With shorter blocking clauses, the complexity of the following SAT solving decreases. \tool is more efficient when the number of backbone variables in the formulas are larger. 
 

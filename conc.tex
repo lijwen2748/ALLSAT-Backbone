@@ -7,9 +7,10 @@ In the non-blocking based All-SAT computing tools \cite{zhao2009asig} \cite{grum
 
 A naive blocking based tool \cite{mcmillan2002applying} uses a SAT solver to find a solution of the given formula, then added the negation of the found formula as a blocking clause to the solver.
 
-\ctool\cite{ietool} is another blocking based tool that uses the greedy strategy named minimal blocking strategy to generate the blocking clauses.
-For a solution of the given formula, \ctool either computes the set of dominate variables based on the clauses coverage or the set of decision variables and their corresponding reason variables based on the search tree.
-Comparing to \ctool, which generates the minimal blocking clauses, \tool uses backbone information instead of decision variables to generate short blocking clauses. The blocking clause in \tool are shorter than the minimal one in \ctool because for a large amount of the clauses that contains at least a backbone variable, the blocking clause does not need to cover them.
+\ctool\cite{ctool} is another blocking based tool that uses a greedy strategy named Minimal Blocking to generate the minimal set of blocking clauses.
+For a solution of the given formula, \ctool either uses the set of dominate variables based on the clauses coverage or the set of decision variables and their corresponding reason variables based on the search tree to generate the blocking clauses.
+However, backbone variables may occur in the minimal set of blocking clauses and actually can be removed based on the Theorem \cite{theo:bl}
+The short blocking clause used in \tool are more efficient than that used in \ctool, and the reduce length of the blocking clauses is a key reason that \tool computes more formulas with less computing time than \ctool does.
 
 \nbc\cite{ietool} is a non-blocking based tool that backtracks the search tree to find every solution of the given formula. There are 4 different backtrack strategies in \nbc, and by use these strategies in different orders, there are 8 different strategies in total in \nbc. Each strategy performs differently on the formulas, therefore, the choice of strategies is a challenge for \nbc. 
 Comparing to \nbc, \tool only uses one strategy which is backbone variables to find every solution of the formula.
