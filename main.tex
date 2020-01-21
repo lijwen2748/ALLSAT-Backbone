@@ -26,12 +26,16 @@
 
 \input{macro}
 \begin{document}
-\title{On Computing ALLSAT Using Backbone Information}
+\title{Solving ALLSAT with Backbone Information}
 \maketitle
 \begin{abstract}
-The ALLSAT (All-Solutions) problems focus on finding every existing satisfiable assignment of a given propositional satisfiability formula. There are several different tasks require the finding of all satisfiable assignments, including model checking, automaton translation and test cases generation.
-In this paper, we introduce \tool, a backbone based ALLSAT solver for propositional formulas. Comparing to the existing work, \tool uses backbone information to get shorter partial satisfiable assignments (partial solutions). More solutions are represented in a shorter partial solution, thus the efficiency of ALLSAT computing has been increased as less SAT solving is needed.
-Experiments show that although finding backbone variables consumes additional computing time , but \tool is still quicker than existing tools,. including \ctool, \bc, \nbc and \bdd. Within the time limitation, the number of formulas which ALLSAT problem that \tool can solve (finish finding all satisfiable assignments of the formulas) is the most. For formulas that are solved by all of the 4 tools, \tool uses xx less computing time than \ctool, xx less time than \bc, xx less time than \nbc and xx less time than \bdd.
+The ALLSAT (All-Solutions) problems focus on finding every existing satisfiable assignment of a given propositional formula. Several different tasks in computer science require the finding of all satisfiable assignments, including model checking, automaton translation and test cases generation.
+In this paper, we introduce \tool, a backbone based ALLSAT solver for propositional formulas. Comparing to the existing work, \tool uses backbone information to get shorter partial solutions. With more solutions representing in the shorter partial solution, less SAT solving is needed and the efficiency of ALLSAT computing increases.
+Experiments show that although finding backbone variables consumes additional computing time , \tool is still faster than existing tools,. including \ctool, \bc, \nbc and \bdd.
+Within the time and memory limitation, \tool solves the most formulas.
+% (79), \ctool solves 65 formulas, \bc solves 64 formulas, \nbc solves 53 formulas and \bdd solves 51 formulas.
+For the formulas that are solved by all the 5 tools, \tool uses the least computing time.
+% (9558.64 seconds), which is 51\% less than \ctool(19427.51 seconds), 48\% less than \bc(18221,86 seconds),  54\% less than \nbc(21263.27 seconds) and 67\% less than \bdd(28901.35 seconds). 
 \end{abstract}
 \input{intro.tex}
 \input{prel.tex}
@@ -39,5 +43,7 @@ Experiments show that although finding backbone variables consumes additional co
 \input{expr.tex}
 \input{conc.tex}
 
+\bibliographystyle{named}
+\bibliography{ijcai20}
 
 \end{document}
