@@ -1,4 +1,4 @@
-\section{All-SAT Solver Using Backbone techniques} \label{sec:meth}
+\section{All-SAT Solver Using Backbone Techniques} \label{sec:meth}
 We propose and implement an All-SAT solver \tool, which uses backbone information to get shorter partial solutions comparing to other tools.
 With the help of shorter partial solutions, the number of SAT calls in \tool significantly reduces and the efficiency increases.
 
@@ -25,7 +25,7 @@ The updating of the formula $F$ continues until $F$ is unsatisfiable.
 
 \subsection{Algorithms of \tool}
 Algorithm \ref{alg:main} shows the main algorithm of \tool, where backbone($F$) uses the algorithms of backbone computing in~\cite{bb}.
-The detail of blocking($F$) is showed in Algorithm \ref{alg:pc}.
+The details of blocking($F$) are showed in Algorithm \ref{alg:pc}.
 In Algorithm \ref{alg:main}, at Line \ref{ln:P}, the set of partial solutions and blocking clauses are initialized with $\emptyset$. The backbone variables of $F$ is computed, stored in $\BL(F)$ and added to $F$ as unit clauses. The solutions obtained from the backbone computation are stored in $S(F)$.
 For every solution $v\in S(F)$, the partial solution $p$ and the blocking clause $C$ are computed and stored in $P(F)$ and $BC(F)$ respectively. 
 At Line \ref{ln:bc}, the blocking clauses in $BC(F)$ are added to $F$, $ret$ is assigned with the satisfiability of $F$, returned by the Minisat Solver. If $F$ is satisfiable, then $v$ is a new solution of $F$, the partial solution $p$ and the blocking clause $C$ of the new solution $v$ is computed at Line \ref{ln:cvt}, and $F$ is updated with $F\wedge C$ again. The while loop at Line \ref{ln:check} continues if $F$ is satisfiable, otherwise \tool finishes the computing of every solution for the input formula, which is represented by at least one of the partial solutions in $P(F)$.
