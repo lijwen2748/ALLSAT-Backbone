@@ -29,12 +29,12 @@
 \title{Solving ALLSAT with Backbone Information}
 \maketitle
 \begin{abstract}
-The ALLSAT (All-Solutions) problems focus on finding every existing satisfiable assignment of a given propositional formula. Several different tasks in computer science require the finding of all satisfiable assignments, including model checking, automaton translation and test cases generation.
-In this paper, we introduce \tool, a backbone based ALLSAT solver for propositional formulas. Comparing to the existing work, \tool uses backbone information to get shorter partial solutions. With more solutions representing in the shorter partial solution, less SAT solving is needed and the efficiency of ALLSAT computing increases.
-Experiments show that although finding backbone variables consumes additional computing time , \tool is still faster than existing tools,. including \ctool, \bc, \nbc and \bdd.
-Within the time and memory limitation, \tool solves the most formulas.
+The ALLSAT (ALL-SATisfiable) problem focus on finding all satisfiable assignments of a given propositional formula, whose applications include model checking, automata translation and the test-case generation. Traditional approaches to solve such problem requires a large amount of SAT calls.
+In this paper, we introduce \tool, a backbone-based ALLSAT solver for propositional formulas. Compared to extant works, \tool utilizes backbone information to obtain shorter partial assignments. As a shorter partial assignment potentially represents a set of more full assignments, the backbone information is able to accelerate the ALLSAT computation. 
+Experiments show that even finding backbone variables pays additional cost, \tool performs better than extant tools including \ctool, \bc, \nbc and \bdd.
+Given the same time and memory resources, \tool solves the largest amount of benchmarks
 % (79), \ctool solves 65 formulas, \bc solves 64 formulas, \nbc solves 53 formulas and \bdd solves 51 formulas.
-For the formulas that are solved by all the 5 tools, \tool uses the least computing time.
+and performs the fastest on the formulas that can be solved by all 5 tools.
 % (9558.64 seconds), which is 51\% less than \ctool(19427.51 seconds), 48\% less than \bc(18221,86 seconds),  54\% less than \nbc(21263.27 seconds) and 67\% less than \bdd(28901.35 seconds). 
 \end{abstract}
 \input{intro.tex}

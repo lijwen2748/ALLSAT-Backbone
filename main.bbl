@@ -1,0 +1,164 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Beyer and Keremoglu}{2011}]{cpachecker}
+Dirk Beyer and M~Erkan Keremoglu.
+\newblock Cpachecker: a tool for configurable software verification.
+\newblock In {\em International Conference on Computer Aided Verification},
+  pages 184--190, 2011.
+
+\bibitem[\protect\citeauthoryear{Biere \bgroup \em et al.\egroup }{2003}]{bmc}
+Armin Biere, Alessandro Cimatti, Edmund~M Clarke, Ofer Strichman, and Yunshan
+  Zhu.
+\newblock Bounded model checking.
+\newblock volume~58, pages 117--148, 2003.
+
+\bibitem[\protect\citeauthoryear{Bradley}{2012}]{ic3}
+Aaron~R Bradley.
+\newblock Understanding ic3.
+\newblock In {\em Theory and Applications of Satisfiability Testing}, pages
+  1--14, 2012.
+
+\bibitem[\protect\citeauthoryear{Brauer \bgroup \em et al.\egroup
+  }{2011}]{brauer2011existential}
+J{\"o}rg Brauer, Andy King, and Jael Kriener.
+\newblock Existential quantification as incremental sat.
+\newblock In {\em International Conference on Computer Aided Verification},
+  pages 191--207. Springer, 2011.
+
+\bibitem[\protect\citeauthoryear{Cadar \bgroup \em et al.\egroup }{2008}]{klee}
+Cristian Cadar, Daniel Dunbar, and Dawson Engler.
+\newblock Klee: unassisted and automatic generation of high-coverage tests for
+  complex systems programs.
+\newblock In {\em Operating Systems Design and Implementation}, pages 209--224,
+  2008.
+
+\bibitem[\protect\citeauthoryear{E{\'e}n and S{\"o}rensson}{2003}]{minisat}
+Niklas E{\'e}n and Niklas S{\"o}rensson.
+\newblock An extensible sat-solver.
+\newblock In {\em International conference on theory and applications of
+  satisfiability testing}, pages 502--518. Springer, 2003.
+
+\bibitem[\protect\citeauthoryear{Grumberg \bgroup \em et al.\egroup
+  }{2004}]{grumberg2004memory}
+Orna Grumberg, Assaf Schuster, and Avi Yadgar.
+\newblock Memory efficient all-solutions sat solver and its application for
+  reachability analysis.
+\newblock In {\em International Conference on Formal Methods in Computer-Aided
+  Design}, pages 275--289. Springer, 2004.
+
+\bibitem[\protect\citeauthoryear{Ishii and Tagawa}{2010}]{p}
+Akihiro~Fujiwara Ishii, Kota and Hirofumi Tagawa.
+\newblock Asynchronous p systems for sat and hamiltonian cycle problem.
+\newblock In {\em 2010 Second World Congress on Nature and Biologically
+  Inspired Computing, IEEE}, pages 513--519, 2010.
+
+\bibitem[\protect\citeauthoryear{Jabbour \bgroup \em et al.\egroup
+  }{2014}]{jabbour2014extending}
+Said Jabbour, Jerry Lonlac, Lakhdar Sais, and Yakoub Salhi.
+\newblock Extending modern sat solvers for models enumeration.
+\newblock In {\em Proceedings of the 2014 IEEE 15th International Conference on
+  Information Reuse and Integration (IEEE IRI 2014)}, pages 803--810. IEEE,
+  2014.
+
+\bibitem[\protect\citeauthoryear{Jin \bgroup \em et al.\egroup
+  }{2005}]{jin2005efficient}
+HoonSang Jin, HyoJung Han, and Fabio Somenzi.
+\newblock Efficient conflict analysis for finding all satisfying assignments of
+  a boolean circuit.
+\newblock In {\em International Conference on Tools and Algorithms for the
+  Construction and Analysis of Systems}, pages 287--300. Springer, 2005.
+
+\bibitem[\protect\citeauthoryear{Kroening and Tautschnig}{2014}]{cbmc}
+Daniel Kroening and Michael Tautschnig.
+\newblock Cbmc – c bounded model checker.
+\newblock In {\em International Conference on Tools and Algorithms for the
+  Construction and Analysis of Systems}, pages 389--391, 2014.
+
+\bibitem[\protect\citeauthoryear{Lahiri \bgroup \em et al.\egroup
+  }{2003}]{lahiri2003symbolic}
+Shuvendu~K Lahiri, Randal~E Bryant, and Byron Cook.
+\newblock A symbolic approach to predicate abstraction.
+\newblock In {\em International Conference on Computer Aided Verification},
+  pages 141--153. Springer, 2003.
+
+\bibitem[\protect\citeauthoryear{Li \bgroup \em et al.\egroup }{2017}]{car}
+Jianwen Li, Shufang Zhu, Yueling Zhang, Geguang Pu, and Moshe~Y. Vardi.
+\newblock Safety model checking with complementary approximations.
+\newblock In {\em 2017 IEEE/ACM International Conference on Computer-Aided
+  Design}, pages 95--100, 2017.
+
+\bibitem[\protect\citeauthoryear{Li \bgroup \em et al.\egroup }{2019}]{aalta}
+Jianwen Li, Kristin~Y. Rozier, Geguang Pu, Yueling Zhang, and Moshe~Y. Vardi.
+\newblock Sat-based explicit ltlf satisfiability checking.
+\newblock In {\em The Thirty-Third AAAI Conference on Artificial Intelligence},
+  pages 2946--2953, 2019.
+
+\bibitem[\protect\citeauthoryear{Lopes \bgroup \em et al.\egroup
+  }{2015}]{lopes2015checking}
+Nuno~P Lopes, Nikolaj Bj{\o}rner, Patrice Godefroid, Karthick Jayaraman, and
+  George Varghese.
+\newblock Checking beliefs in dynamic networks.
+\newblock In {\em 12th $\{$USENIX$\}$ Symposium on Networked Systems Design and
+  Implementation ($\{$NSDI$\}$ 15)}, pages 499--512, 2015.
+
+\bibitem[\protect\citeauthoryear{Majumdar \bgroup \em et al.\egroup
+  }{2014}]{majumdar2014kuai}
+Rupak Majumdar, Sai~Deep Tetali, and Zilong Wang.
+\newblock Kuai: A model checker for software-defined networks.
+\newblock In {\em 2014 Formal Methods in Computer-Aided Design}, pages
+  163--170. IEEE, 2014.
+
+\bibitem[\protect\citeauthoryear{McMillan}{2002}]{mcmillan2002applying}
+Ken~L McMillan.
+\newblock Applying sat methods in unbounded symbolic model checking.
+\newblock In {\em International Conference on Computer Aided Verification},
+  pages 250--264. Springer, 2002.
+
+\bibitem[\protect\citeauthoryear{Morgado and
+  Marques-Silva}{2005}]{morgado2005good}
+Ant{\'o}nio Morgado and Joao Marques-Silva.
+\newblock Good learning and implicit model enumeration.
+\newblock In {\em 17th IEEE International Conference on Tools with Artificial
+  Intelligence}, pages 6--pp. IEEE, 2005.
+
+\bibitem[\protect\citeauthoryear{Ping and Ruilong}{2018}]{pa}
+Z.~H. U. Jian C. H. E. N.~Haizhu Ping, G. U.~O. and Y.~A. N.~G. Ruilong.
+\newblock A linear-time solution for all-sat problem based on p system.
+\newblock pages 367--373, 2018.
+
+\bibitem[\protect\citeauthoryear{Sapra \bgroup \em et al.\egroup
+  }{2003}]{sapra2003sat}
+Samir Sapra, Michael Theobald, and Edmund Clarke.
+\newblock Sat-based algorithms for logic minimization.
+\newblock In {\em Proceedings 21st International Conference on Computer
+  Design}, pages 510--517. IEEE, 2003.
+
+\bibitem[\protect\citeauthoryear{Toda and Soh}{2016}]{ietool}
+Takahisa Toda and Takehide Soh.
+\newblock Implementing efficient all solutions sat solvers.
+\newblock {\em Journal of Experimental Algorithmics (JEA)}, 21:1--12, 2016.
+
+\bibitem[\protect\citeauthoryear{Yu \bgroup \em et al.\egroup }{2014}]{ctool}
+Yinlei Yu, Pramod Subramanyan, Nestan Tsiskaridze, and Sharad Malik.
+\newblock All-sat using minimal blocking clauses.
+\newblock In {\em 2014 27th International Conference on VLSI Design and 2014
+  13th International Conference on Embedded Systems}, pages 86--91. IEEE, 2014.
+
+\bibitem[\protect\citeauthoryear{Zhang \bgroup \em et al.\egroup
+  }{2012}]{zhang2012verification}
+Shuyuan Zhang, Sharad Malik, and Rick McGeer.
+\newblock Verification of computer switching networks: An overview.
+\newblock In {\em International Symposium on Automated Technology for
+  Verification and Analysis}, pages 1--16. Springer, 2012.
+
+\bibitem[\protect\citeauthoryear{Zhang \bgroup \em et al.\egroup }{2018}]{bb}
+Yueling Zhang, Min Zhang, Geguang Pu, Fu~Song, and Jianwen Li.
+\newblock Towards backbone computing: A greedy-whitening based approach.
+\newblock {\em AI Communications}, 31(3):267--280, 2018.
+
+\bibitem[\protect\citeauthoryear{Zhao and Wu}{2009}]{zhao2009asig}
+Weinan Zhao and Weimin Wu.
+\newblock Asig: An all-solution sat solver for cnf formulas.
+\newblock pages 508--513, 2009.
+
+\end{thebibliography}
