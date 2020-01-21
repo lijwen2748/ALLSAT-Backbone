@@ -29,12 +29,12 @@
 \title{Solving All-SAT with Shorter Blocking Clauses Reduced by Backbone Variables}
 \maketitle
 \begin{abstract}
-The All-SAT (All-SATisfiable) problem focuses on finding all satisfiable assignments of a given propositional formula, whose applications include model checking, automaton translation and the test-case generation. To solve such problems, traditional approaches require a large amount of SAT calls.
+The All-SAT (All-SATisfiable) problem focuses on finding all satisfiable assignments of a given propositional formula, whose applications include model checking, automata construction and the test-case generation. To solve this problem, traditional approaches require a large amount of SAT calls.
 In this paper, we introduce \tool, a backbone-based All-SAT solver for propositional formulas. Compared to the extant work, \tool utilizes backbone information to obtain shorter partial assignments. As a shorter partial assignment potentially represents a set of more full assignments, the backbone information is able to accelerate the All-SAT computation. 
-Experiments show that even finding backbone variables pays additional cost, \tool performs better than the extant tools including \ctool, \bc, \nbc and \bdd.
-Given the same time and memory resources, \tool solves the largest amount of benchmarks, which is 18\% more than \ctool does, 19\% more than \bc does, 33\% more than \nbc doess and 36\% more than \bdd does.
+Experiments show that though finding backbone variables pays additional cost, \tool performs better than the extant tools including \ctool, \bc, \nbc and \bdd.
+Given the same time and memory resources, \tool solves the largest amount of benchmarks by gaining 14, 15, 26, 28 more instances than \ctool, \bc, \nbc and \bdd respectively, out of the total 608 instances.
 % (79), \ctool solves 65 formulas, \bc solves 64 formulas, \nbc solves 53 formulas and \bdd solves 51 formulas.
-Also, \tool performs the fastest on the formulas that can be solved by all 5 tools, which is 51\% faster than \ctool, 48\% faster than \bc, 54\% faster than \nbc and 67\% faster than \bdd.
+Also, \tool performs the fastest on the 30 formulas that can be solved by all 5 tools, saving the percentage of 51\%, 48\%, 54\% and 67\% time cost than \ctool, \bc, \nbc and \bdd respectively.
 % (9558.64 seconds), which is 51\% less than \ctool(19427.51 seconds), 48\% less than \bc(18221,86 seconds),  54\% less than \nbc(21263.27 seconds) and 67\% less than \bdd(28901.35 seconds). 
 \end{abstract}
 \input{intro.tex}
