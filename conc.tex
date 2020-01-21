@@ -9,7 +9,7 @@ A naive blocking based tool \cite{mcmillan2002applying} uses a SAT solver to fin
 
 \ctool\cite{ietool} is another blocking based tool that uses the greedy strategy named minimal blocking strategy to generate the blocking clauses.
 For a solution of the given formula, \ctool either computes the set of dominate variables based on the clauses coverage or the set of decision variables and their corresponding reason variables based on the search tree.
-Comparing to \ctool, \tool uses backbone information instead of decision variables to generate the blocking clauses. By using backbone variables, shorter blocking clauses are generated.
+Comparing to \ctool, which generates the minimal blocking clauses, \tool uses backbone information instead of decision variables to generate short blocking clauses. The blocking clause in \tool are shorter than the minimal one in \ctool because for a large amount of the clauses that contains at least a backbone variable, the blocking clause does not need to cover them.
 
 \nbc\cite{ietool} is a non-blocking based tool that backtracks the search tree to find every solution of the given formula. There are 4 different backtrack strategies in \nbc, and by use these strategies in different orders, there are 8 different strategies in total in \nbc. Each strategy performs differently on the formulas, therefore, the choice of strategies is a challenge for \nbc. 
 Comparing to \nbc, \tool only uses one strategy which is backbone variables to find every solution of the formula.
