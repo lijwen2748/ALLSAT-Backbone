@@ -26,7 +26,7 @@ Others(10) & 11593 & 44557 & 325.19 & 1131 & 10 & 9 & 7 & 5 & 4 \\
 Total(79) & 7323 & 393119 & 327.97 & 227.79 & 79 & 65 & 64 & 53 & 51 \\
 \bottomrule
 \end{tabular}
-    \caption{Overall Performance of ALLSAT Computing Tools}
+    \caption{Overall Performance of All-SAT Computing Tools}
     \label{tab:main}
 \end{table*} 
 
@@ -34,11 +34,8 @@ For the 31 formulas that are solved by all the 5 tools, \tool uses the least com
 Since only \tool solves all the 79 formulas, we only compare the computing time among the formulas that are solved by both \tool and one of the comparing tools (including \ctool, \bc, \nbc, and \bdd).
 
 There are 65 formulas solved by both \tool and \ctool, \ctool uses less computing time than \tool for 11 of the formulas, for the rest 54 formulas, \tool uses less computing time. In total, \tool uses 86274.54 seconds and \ctool uses 110932.01 seconds, which is 22\% more than \tool uses.
-
 There are 64 formulas solved by both \tool and \bc, \bc uses less computing time than \tool for 22 of the formulas, for the rest 44 formulas, \tool uses less computing time. In total, \tool uses 92198.9 seconds and \bc uses 110932.01 seconds, which is 37\% more than \tool uses.
-
 There are 53 formulas solved by both \tool and \nbc, \nbc uses less computing time than \tool for 20 of the formulas, for the rest 33 formulas, \tool uses less computing time. In total, \tool uses 28024.15 seconds and \nbc uses 123761.88 seconds, which is 78\% more than \tool uses.
-
 There are 51 formulas solved by \tool of \bdd, \bdd uses less computing time than \tool for 9 of the formulas, for the rest 42 formulas, \tool uses less computing time. In total, \tool uses 74686.244 seconds and \bdd uses 107023.29 seconds, which is 31\% more than \tool uses.
 
 Based on the comparison of number of solved formulas and computing time between \tool and the other comparing tools, we conclude that \tool is able to solve the most formulas with the least computing time, and \ctool ranks the second place in the comparison. 
@@ -53,22 +50,22 @@ We then compare the performance of blocking based tools, including \tool, \ctool
     \centering
     \includegraphics[scale=0.5]{allsat-time.png}
     \caption{Comparison of Computing Time between \tool and Other Tools}
-    \label{fig:allsat-time}
+    \label{fig:All-SAT-time}
 \end{figure}
 
-There are 53 formulas that are solved by all the the three tools. Figure \ref{fig:allsat-time} shows the computing time comparison among the 53 formulas. The x-axis is the computing time of the comparing tools, and the y-axis is the computing time of \tool. The line (red) is the base line, set up by the computing time of \tool, the circles (green) are the comparing data of \bc, the crosses (blue) are the computing data of \ctool. For the circles and crosses that are above the line, the computing time of the comparing tools are less than \tool. Results show that for the majority of the formulas, \tool needs less computing time than both \ctool and \bc. And \ctool needs more computing time than \bc on general. It is because that \bc only uses the decision variables in the blocking clauses, therefore, the blocking clauses of \bc is shorter than \ctool. 
+There are 53 formulas that are solved by all the the three tools. Figure \ref{fig:All-SAT-time} shows the computing time comparison among the 53 formulas. The x-axis is the computing time of the comparing tools, and the y-axis is the computing time of \tool. The line (red) is the base line, set up by the computing time of \tool, the circles (green) are the comparing data of \bc, the crosses (blue) are the computing data of \ctool. For the circles and crosses that are above the line, the computing time of the comparing tools are less than \tool. Results show that for the majority of the formulas, \tool needs less computing time than both \ctool and \bc. And \ctool needs more computing time than \bc on general. It is because that \bc only uses the decision variables in the blocking clauses, therefore, the blocking clauses of \bc is shorter than \ctool. 
 
-Figure \ref{fig:allsat-blk} shows the length of blocking clauses of the three tools. The x-axis is the length of blocking clauses in \ctool and \bc, and the y-axis is the length of blocking clauses in \tool. The line (red) is the base line set up by the length of blocking clauses in \tool, the circles (green) are the comparing data in \bc, and the crosses (blue) are the comparing data in \ctool. The scatter only shows the formulas which average length of blocking clauses is less than 2000. From Figure \ref{fig:allsat-blk}, we can see that for most of the formulas, the length of average blocking clauses in \tool is shorter than \ctool and \bc, which is an important reason that \tool uses less computing time than \ctool and \bc.
+Figure \ref{fig:All-SAT-blk} shows the length of blocking clauses of the three tools. The x-axis is the length of blocking clauses in \ctool and \bc, and the y-axis is the length of blocking clauses in \tool. The line (red) is the base line set up by the length of blocking clauses in \tool, the circles (green) are the comparing data in \bc, and the crosses (blue) are the comparing data in \ctool. The scatter only shows the formulas which average length of blocking clauses is less than 2000. From Figure \ref{fig:All-SAT-blk}, we can see that for most of the formulas, the length of average blocking clauses in \tool is shorter than \ctool and \bc, which is an important reason that \tool uses less computing time than \ctool and \bc.
 
-With the results of Figure \ref{fig:allsat-time} and \ref{fig:allsat-blk}, we observe that tools with shorter blocking clauses perform better than the ones with longer blocking clauses.
+With the results of Figure \ref{fig:All-SAT-time} and \ref{fig:All-SAT-blk}, we observe that tools with shorter blocking clauses perform better than the ones with longer blocking clauses.
 The average length of blocking clauses in \tool is 1026 (among the 79 formulas), the average length of blocking clauses in \ctool is 22182 (among the 65 formulas) and the average length of blocking clauses in \bc is 6180 (among the 64 formulas).
-The reason for \tool with short length of blocking clauses is because by using backbone information, a huge part of variables are removed from the blocking clauses. Therefore, backbone information contributes to the computing of ALLSAT problems.
+The reason for \tool with short length of blocking clauses is because by using backbone information, a huge part of variables are removed from the blocking clauses. Therefore, backbone information contributes to the computing of All-SAT problems.
 
 \begin{figure}
     \centering
     \includegraphics[scale=0.5]{allsat-blk.png}
     \caption{Comparison of Length of Blocking Clauses between \tool and Other Tools}
-    \label{fig:allsat-blk}
+    \label{fig:All-SAT-blk}
 \end{figure}
 
 %i st bb

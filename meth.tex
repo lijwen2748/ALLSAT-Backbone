@@ -1,5 +1,5 @@
-\section{ALLSAT Solver Using Backbone Information} \label{sec:meth}
-We propose and implement an ALLSAT solver \tool, \tool uses backbone information to get shorter partial solutions comparing to other tools.
+\section{All-SAT Solver Using Backbone Information} \label{sec:meth}
+We propose and implement an All-SAT solver \tool, \tool uses backbone information to get shorter partial solutions comparing to other tools.
 With the help of shorter partial solutions, the number of SAT solving in \tool reduced and the efficiency increased.
 
 \subsection{Overview of Algorithms}
@@ -116,15 +116,15 @@ According to Theorem \ref{theo:bl}, there does not exist a partial solution $p$ 
 
 The main contribution of \tool is to use backbone variables in the computing of partial solutions and the blocking clauses. As proved in Theorem \ref{theo:bl}, every backbone variable must appear in every partial solution. Therefore, \tool removes the backbone variables and generates blocking clauses without them in it. To simplify the following SAT solving, backbone variables are used as initial assumptions by adding them back as unit clauses. With shorter blocking clauses, the complexity of the following SAT solving decreases. \tool is more efficient when the number of backbone variables in the formulas are larger. 
 
-With the help of backbone variables, for some of the formulas, ALLSAT computing terminates without any blocking clauses.
+With the help of backbone variables, for some of the formulas, All-SAT computing terminates without any blocking clauses.
 For a given formula $F$, whenever every clause $c\in F$ is satisfied by at least one backbone literal of $F$, \tool terminates. Since the set of backbones is the only one partial solution that represents every full solution of $F$.
 
 Given a formula $F=(a\vee b)\wedge(a \vee \neg b)\wedge (\neg a \vee c \vee \neg d)$.
-Table \ref{tab:comp} shows the ALLSAT computing procedure of $F$.
+Table \ref{tab:comp} shows the All-SAT computing procedure of $F$.
 \tool first computes the backbone variables of $F$, $a$ is the backbone variable of $F$, and the solution found during the backbone computing is $v=a\wedge b\wedge c \wedge d$. The partial solution $p$ and the blocking clause $C$ returned by Algorithm \ref{alg:pc} are $p=c$ and $C=\neg c$, respectively. 
 Then $F$ is updated with the backbone variables and the blocking clauses, the backbone variable $a$ is added to $F$ as unit clause, and the blocking clause $\neg c$ is also added to $F$. The updated $F$ is $F=(a\vee b)\wedge(a \vee \neg b)\wedge (\neg a \vee c \vee \neg d)\wedge a\wedge \neg c$.
 A new solution $v'=a\wedge b\wedge \neg c \wedge \neg d$ for the formula $F$ is computed. $p=\neg d$ and $C=d$ are returned by Algorithm \ref{alg:pc}.
-Then $F$ is updated with $F=(a\vee b)\wedge(a \vee \neg b)\wedge (\neg a \vee c \vee \neg d)\wedge a\wedge \neg c\wedge d$. $F$ is unsatisfiable, and the ALLSAT computing of $F=(a\vee b)\wedge(a \vee \neg b)\wedge (\neg a \vee c \vee \neg d)$ finished.
+Then $F$ is updated with $F=(a\vee b)\wedge(a \vee \neg b)\wedge (\neg a \vee c \vee \neg d)\wedge a\wedge \neg c\wedge d$. $F$ is unsatisfiable, and the All-SAT computing of $F=(a\vee b)\wedge(a \vee \neg b)\wedge (\neg a \vee c \vee \neg d)$ finished.
 The solutions of $F=(a\vee b)\wedge(a \vee \neg b)\wedge (\neg a \vee c \vee \neg d)$ are represented with either $a\wedge \neg c$ or $a\wedge d$.
 
 \begin{table*}

@@ -1,9 +1,9 @@
 \section{Related Work} \label{sec:rela}
-There are mainly two kinds of ALLSAT solvers, blocking based solvers and non-blocking based solvers.
-\tool is a blocking based ALLSAT solver.
+There are mainly two kinds of All-SAT solvers, blocking based solvers and non-blocking based solvers.
+\tool is a blocking based All-SAT solver.
 The main difference between blocking based and non-blocking based solvers is the use of blocking clauses.
 In order to avoid finding the already known solutions of the formula, blocking based tools generate the blocking clauses of each known solution and added the blocking clauses back to the solver.
-In the non-blocking based ALLSAT computing tools \cite{zhao2009asig} \cite{grumberg2004memory} \cite{jabbour2014extending} \cite{ietool}, backtrack techniques in the search tree are used to find more solutions of the given formula. Once a solution is found, the non-blocking based tools choose a decision level and backtracks the search tree to that level. A Different decision is made at that level and a new search path is generated based on the new decision.
+In the non-blocking based All-SAT computing tools \cite{zhao2009asig} \cite{grumberg2004memory} \cite{jabbour2014extending} \cite{ietool}, backtrack techniques in the search tree are used to find more solutions of the given formula. Once a solution is found, the non-blocking based tools choose a decision level and backtracks the search tree to that level. A Different decision is made at that level and a new search path is generated based on the new decision.
 
 A naive blocking based tool \cite{mcmillan2002applying} uses a SAT solver to find a solution of the given formula, then added the negation of the found formula as a blocking clause to the solver.
 
@@ -14,12 +14,12 @@ Comparing to \ctool, \tool uses backbone information instead of decision variabl
 \nbc\cite{ietool} is a non-blocking based tool that backtracks the search tree to find every solution of the given formula. There are 4 different backtrack strategies in \nbc, and by use these strategies in different orders, there are 8 different strategies in total in \nbc. Each strategy performs differently on the formulas, therefore, the choice of strategies is a challenge for \nbc. 
 Comparing to \nbc, \tool only uses one strategy which is backbone variables to find every solution of the formula.
 
-Another two approaches of ALLSAT computing are BDD based tools and P systems based tools. The idea of the \bdd is to build an ordered binary decision tree, based on the OBDD, every solution is visited. But the building of the OBDD may take longer computing time than the pure computing of ALLSAT and the fixed order of the OBDD also affects the performance of \bdd.
-P system based tools use P system to compute NP problems, including ALLSAT problems. P system are inherently paralleled and has been used in the solving of SAT problems recently~\cite{p}. Ping~\cite{pa} designs a family of P system and reduce the time complexity of ALLSAT computing to linear time. There are only theoretical algorithms and no experiment is conducted in the paper.
+Another two approaches of All-SAT computing are BDD based tools and P systems based tools. The idea of the \bdd is to build an ordered binary decision tree, based on the OBDD, every solution is visited. But the building of the OBDD may take longer computing time than the pure computing of All-SAT and the fixed order of the OBDD also affects the performance of \bdd.
+P system based tools use P system to compute NP problems, including All-SAT problems. P system are inherently paralleled and has been used in the solving of SAT problems recently~\cite{p}. Ping~\cite{pa} designs a family of P system and reduce the time complexity of All-SAT computing to linear time. There are only theoretical algorithms and no experiment is conducted in the paper.
 
 \section{Conclusion} \label{sec:conc}
-We proposed an ALLSAT computing tool \tool which uses backbone information to get shorter blocking clauses and achieve higher efficiency.
-Comparing to other ALLSAT computing tools, \tool removes backbone variables from the blocking clauses. With shorter blocking clauses, the complexity of the following SAT solving decreases, the number of SAT solving needed decreases and the efficiency of ALLSAT computing improves. 
+We proposed an All-SAT computing tool \tool which uses backbone information to get shorter blocking clauses and achieve higher efficiency.
+Comparing to other All-SAT computing tools, \tool removes backbone variables from the blocking clauses. With shorter blocking clauses, the complexity of the following SAT solving decreases, the number of SAT solving needed decreases and the efficiency of All-SAT computing improves. 
 Experiments show that within the given computing time and memory limitation, \tool is able to solver more formulas than other comparing tools.
 For the formulas that are solved both by \tool and the comparing tools, \tool uses less computing time than the comparing tools.
-Therefore, \tool is an efficient ALLSAT computing tool that performs the best among the existing tools with the given benchmark.
+Therefore, \tool is an efficient All-SAT computing tool that performs the best among the existing tools with the given benchmark.
